@@ -32,10 +32,10 @@ public class TextCompressor {
     private static void compress() {
 
         String s = BinaryStdIn.readString();
-        int n = s.length();
-        BinaryStdOut.write(n);
         String[] words;
         words = s.split(" ");
+        int n = words.length;
+        BinaryStdOut.write(n);
 
         String[] dict = new String[16];
         dict[0] = "the";
@@ -60,8 +60,11 @@ public class TextCompressor {
                     BinaryStdOut.write(j, 4);
                     BinaryStdOut.write(" ");
                 }
-                BinaryStdOut.write(words[i]);
-                BinaryStdOut.write(" ");
+                else {
+                    BinaryStdOut.write(words[i]);
+                    BinaryStdOut.write(" ");
+                }
+
             }
         }
         BinaryStdOut.close();
