@@ -31,16 +31,99 @@ public class TextCompressor {
 
     private static void compress() {
 
-        // TODO: Complete the compress() method
+        String s = BinaryStdIn.readString();
+        int n = s.length();
+        BinaryStdOut.write(n);
+        String[] words;
+        words = s.split(" ");
 
+        String[] dict = new String[16];
+        dict[0] = "the";
+        dict[1] = "be";
+        dict[2] = "to";
+        dict[3] = "of";
+        dict[4] = "and";
+        dict[5] = "a";
+        dict[6] = "in";
+        dict[7] = "that";
+        dict[8] = "have";
+        dict[9] = "I";
+        dict[10] = "you";
+        dict[11] = "it";
+        dict[12] = "not";
+        dict[13] = "that";
+        dict[14] = "and";
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 15; j++) {
+                if(words[i].equals(dict[j])) {
+                    BinaryStdOut.write(j, 4);
+                    BinaryStdOut.write(" ");
+                }
+                BinaryStdOut.write(words[i]);
+                BinaryStdOut.write(" ");
+            }
+        }
         BinaryStdOut.close();
     }
 
     private static void expand() {
+        String s = BinaryStdIn.readString();
+        int n = BinaryStdIn.readInt();
+        String[] words;
+        words = s.split(" ");
 
-        // TODO: Complete the expand() method
+        for(int i = 0; i < n; i++) {
+            if(words[i].equals("0")) {
+                BinaryStdOut.write("the");
+            }
+            else if (words[i].equals("1")) {
+                BinaryStdOut.write("be");
+            }
+            else if (words[i].equals("3")) {
+                BinaryStdOut.write("to");
+            }
+            else if (words[i].equals("3")) {
+                BinaryStdOut.write("of");
+            }
+            else if (words[i].equals("4")) {
+                BinaryStdOut.write("and");
+            }
+            else if (words[i].equals("5")) {
+                BinaryStdOut.write("a");
+            }
+            else if (words[i].equals("6")) {
+                BinaryStdOut.write("in");
+            }
+            else if (words[i].equals("7")) {
+                BinaryStdOut.write("that");
+            }
+            else if (words[i].equals("8")) {
+                BinaryStdOut.write("have");
+            }
+            else if (words[i].equals("9")) {
+                BinaryStdOut.write("I");
+            }
+            else if (words[i].equals("10")) {
+                BinaryStdOut.write("you");
+            }
+            else if (words[i].equals("11")) {
+                BinaryStdOut.write("it");
+            }
+            else if (words[i].equals("12")) {
+                BinaryStdOut.write("not");
+            }
+            else if (words[i].equals("13")) {
+                BinaryStdOut.write("that");
+            }
+            else if (words[i].equals("14")) {
+                BinaryStdOut.write("and");
+            }
+            else {
+                BinaryStdOut.write(words[i]);
+            }
+        }
 
-        BinaryStdOut.close();
     }
 
     public static void main(String[] args) {
