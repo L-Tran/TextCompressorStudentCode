@@ -37,16 +37,32 @@ public class TextCompressor {
     private static void compress() {
         // Read data into String text
         String text = BinaryStdIn.readString();
+
+        // Initialize TST
         TST prefixes = new TST();
+        for (int i = 0; i < R / 2; i++) {
+            prefixes.insert(Character.toString((char) i), i);
+        }
+
+        int nexCode = EOF;
         int index = 0;
-        String prefix = ;
+
+        String prefix = text.substring(0, 1);
         while (index < text.length()) {
             // Prefix = longest coded word that matches text @ index
+            prefix = prefixes.getLongestPrefix(text.substring(index));
             // Write out that code
+            BinaryStdOut.write(prefixes.lookup(prefix));
             // If possible, look ahead to the next character
-            // Append that character to prefix
+            if (index + prefix.length() < text.length()) {
+                // Append that character to prefix
+                prefix += text.charAt(index);
+                nexCode++;
+            }
             // Associate prefix with the next code (if available)
+            prefixes.insert(prefix, nexCode);
             // Index += prefix.length
+            index += prefix.length();
         }
         // Write out EOF and close
         BinaryStdOut.write(EOF);
@@ -54,6 +70,7 @@ public class TextCompressor {
     }
 
     private static void expand() {
+
 
     }
 
