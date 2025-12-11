@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c0fc687-5e81-4f2e-86c0-a00732202ab3" name="Changes" comment="Started final version">
+    <list default="true" id="4c0fc687-5e81-4f2e-86c0-a00732202ab3" name="Changes" comment="First attempt at final compress function + updated alice.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WORK_LOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/WORK_LOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TextCompressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextCompressor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alice.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/alice.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shakespeare.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/shakespeare.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Text Expand.executor": "Debug",
+    "Application.TextCompressor.executor": "Run",
+    "Application.Unnamed.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -60,6 +63,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Text Expand" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="TextCompressor" />
+      <module name="Text Compressor Student Code" />
+      <option name="PROGRAM_PARAMETERS" value="+" />
+      <option name="REDIRECT_INPUT" value="true" />
+      <option name="INPUT_FILE" value="$PROJECT_DIR$/src/comp.bin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -102,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765213963235</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="First attempt at final compress function + updated alice.txt">
+      <option name="closed" value="true" />
+      <created>1765251028008</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765251028008</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -110,6 +133,7 @@
     <MESSAGE value="Attempted compression algorithm using common words" />
     <MESSAGE value="Attempted expansion algorithm using common words + thinking" />
     <MESSAGE value="Started final version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started final version" />
+    <MESSAGE value="First attempt at final compress function + updated alice.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="First attempt at final compress function + updated alice.txt" />
   </component>
 </project>
